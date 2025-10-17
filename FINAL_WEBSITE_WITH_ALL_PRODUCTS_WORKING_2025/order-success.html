@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienie złożone - BLANK SHOP</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Dziękujemy za złożenie zamówienia w BLANK SHOP. Szczegóły zamówienia i dalsze instrukcje.">
+    <meta name="keywords" content="zamówienie, potwierdzenie, zakupy, BLANK SHOP">
+    <meta name="author" content="BLANK SHOP">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Zamówienie złożone - BLANK SHOP">
+    <meta property="og:description" content="Dziękujemy za zakupy w BLANK SHOP">
+    <meta property="og:image" content="./images/logo.png">
+    <meta property="og:url" content="https://yoursite.com/order-success.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="font-inter">
+    <!-- Header -->
+    <header class="header-modern">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="./index.html" aria-label="BLANK SHOP - Strona główna">
+                        <img src="./images/logo.png" alt="BLANK SHOP" class="logo-img">
+                    </a>
+                </div>
+                
+                <!-- Navigation Desktop -->
+                <nav class="nav-desktop">
+                    <a href="./index.html" class="nav-link">Strona główna</a>
+                    <a href="./index.html#kategorie" class="nav-link">Kategorie</a>
+                    <a href="./index.html#produkty" class="nav-link">Produkty</a>
+                    <a href="./o-nas.html" class="nav-link">O nas</a>
+                </nav>
+                
+                <!-- Search -->
+                <div class="search-container">
+                    <input type="text" placeholder="Szukaj produktów..." class="search-input">
+                    <button class="search-btn" aria-label="Szukaj">
+                        <i data-lucide="search"></i>
+                    </button>
+                </div>
+                
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <a href="./favorites.html" class="icon-btn" aria-label="Ulubione">
+                        <i data-lucide="heart"></i>
+                        <span class="badge" id="favorites-count">0</span>
+                    </a>
+                    <a href="./cart.html" class="icon-btn" aria-label="Koszyk">
+                        <i data-lucide="shopping-bag"></i>
+                        <span class="badge" id="cart-count">0</span>
+                    </a>
+                    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Success Message -->
+            <section class="success-section">
+                <div class="success-container">
+                    <div class="success-icon">
+                        <i data-lucide="check-circle"></i>
+                    </div>
+                    
+                    <h1 class="success-title">Dziękujemy za zamówienie!</h1>
+                    <p class="success-subtitle">Twoje zamówienie zostało przyjęte i jest przetwarzane</p>
+                    
+                    <div class="order-info">
+                        <h2>Szczegóły zamówienia</h2>
+                        <div class="order-details">
+                            <div class="detail-row">
+                                <span class="label">Numer zamówienia:</span>
+                                <span class="value" id="order-number">-</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">Data zamówienia:</span>
+                                <span class="value" id="order-date">-</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">Status płatności:</span>
+                                <span class="value status-paid">Opłacone</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">Sposób płatności:</span>
+                                <span class="value" id="payment-method">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order Items -->
+                    <div class="order-summary-section">
+                        <h3>Zamówione produkty</h3>
+                        <div class="ordered-items" id="ordered-items">
+                            <!-- Items will be populated by JavaScript -->
+                        </div>
+                        
+                        <div class="order-totals">
+                            <div class="total-row" id="discount-info" style="display: none;">
+                                <span>Rabat (<span id="used-promo"></span>):</span>
+                                <span class="discount-amount" id="discount-value">-0,00 zł</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Dostawa:</span>
+                                <span class="delivery-free">Darmowa</span>
+                            </div>
+                            <div class="total-row total">
+                                <span>Łączna kwota:</span>
+                                <span id="final-total">0,00 zł</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Info -->
+                    <div class="shipping-info">
+                        <h3>Adres dostawy</h3>
+                        <div class="shipping-address" id="shipping-address">
+                            <!-- Address will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Next Steps -->
+                    <div class="next-steps">
+                        <h3>Co dalej?</h3>
+                        <div class="steps-list">
+                            <div class="step">
+                                <div class="step-icon">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h4>Potwierdzenie e-mail</h4>
+                                    <p>Na Twój adres e-mail zostanie wysłane potwierdzenie zamówienia z wszystkimi szczegółami</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-icon">
+                                    <i data-lucide="package"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h4>Przygotowanie zamówienia</h4>
+                                    <p>Twoje zamówienie zostanie przygotowane i spakowane w ciągu 1-2 dni roboczych</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-icon">
+                                    <i data-lucide="truck"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h4>Wysyłka</h4>
+                                    <p>Otrzymasz informację o wysyłce wraz z numerem śledzenia przesyłki</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="success-actions">
+                        <a href="./index.html" class="btn-primary">
+                            <i data-lucide="home"></i>
+                            Wróć do strony głównej
+                        </a>
+                        
+                        <a href="./index.html#produkty" class="btn-secondary">
+                            <i data-lucide="shopping-bag"></i>
+                            Kontynuuj zakupy
+                        </a>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <p>
+                            <strong>Masz pytania?</strong> Skontaktuj się z nami:<br>
+                            E-mail: <a href="mailto:zamowienia@blankshop.pl">zamowienia@blankshop.pl</a><br>
+                            Telefon: <a href="tel:+48123456789">+48 123 456 789</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="./images/logo-white.png" alt="BLANK SHOP" class="footer-logo-img">
+                    <p class="footer-description">
+                        Twój niezawodny partner w świecie mody. Odkryj najlepsze marki w wyjątkowych cenach.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Szybkie linki</h4>
+                    <ul class="footer-links">
+                        <li><a href="./index.html">Strona główna</a></li>
+                        <li><a href="./index.html#kategorie">Kategorie</a></li>
+                        <li><a href="./index.html#produkty">Produkty</a></li>
+                        <li><a href="./o-nas.html">O nas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Pomoc</h4>
+                    <ul class="footer-links">
+                        <li><a href="./regulamin.html">Regulamin</a></li>
+                        <li><a href="./polityka-prywatnosci.html">Polityka prywatności</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BLANK SHOP. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/app.js"></script>
+    <script src="./js/order-success.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

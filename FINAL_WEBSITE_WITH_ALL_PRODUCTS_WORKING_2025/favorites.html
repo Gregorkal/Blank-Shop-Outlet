@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulubione produkty - BLANK SHOP</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Twoje ulubione produkty w BLANK SHOP - Zarządzaj swoimi wyborami i znajdź idealne produkty dla siebie.">
+    <meta name="keywords" content="ulubione, produkty, outlet, wishlist, BLANK SHOP">
+    <meta name="author" content="BLANK SHOP">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ulubione produkty - BLANK SHOP">
+    <meta property="og:description" content="Zarządzaj swoimi ulubionymi produktami w BLANK SHOP">
+    <meta property="og:image" content="./images/logo.png">
+    <meta property="og:url" content="https://yoursite.com/favorites.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="font-inter">
+    <!-- Header -->
+    <header class="header-modern">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="./index.html" aria-label="BLANK SHOP - Strona główna">
+                        <img src="./images/logo.png" alt="BLANK SHOP" class="logo-img">
+                    </a>
+                </div>
+                
+                <!-- Navigation Desktop -->
+                <nav class="nav-desktop">
+                    <a href="./index.html" class="nav-link">Strona główna</a>
+                    <a href="./index.html#kategorie" class="nav-link">Kategorie</a>
+                    <a href="./index.html#produkty" class="nav-link">Produkty</a>
+                    <a href="./index.html#kontakt" class="nav-link">Kontakt</a>
+                    <a href="./o-nas.html" class="nav-link">O nas</a>
+                </nav>
+                
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Szukaj w ulubionych..." class="search-input">
+                    <button class="search-btn" aria-label="Szukaj">
+                        <i data-lucide="search"></i>
+                    </button>
+                </div>
+                
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <a href="./favorites.html" class="icon-btn active" aria-label="Ulubione">
+                        <i data-lucide="heart"></i>
+                        <span class="badge" id="favorites-count">0</span>
+                    </a>
+                    <button class="icon-btn" aria-label="Koszyk">
+                        <i data-lucide="shopping-bag"></i>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav" id="mobile-nav">
+                <a href="./index.html" class="mobile-nav-link">Strona główna</a>
+                <a href="./index.html#kategorie" class="mobile-nav-link">Kategorie</a>
+                <a href="./index.html#produkty" class="mobile-nav-link">Produkty</a>
+                <a href="./index.html#kontakt" class="mobile-nav-link">Kontakt</a>
+                <a href="./o-nas.html" class="mobile-nav-link">O nas</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="./index.html" class="breadcrumb-link">Strona główna</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">Ulubione produkty</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Favorites Page -->
+    <main class="favorites-page">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="page-title-section">
+                    <h1 class="page-title">
+                        <i data-lucide="heart"></i>
+                        Twoje ulubione produkty
+                    </h1>
+                    <p class="page-subtitle">Zarządzaj swoimi wyborami i nie przegap okazji</p>
+                </div>
+                <div class="page-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-favorites">0</span>
+                        <span class="stat-label">produktów</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-savings">0,00 zł</span>
+                        <span class="stat-label">oszczędności</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Toolbar -->
+            <div class="favorites-toolbar">
+                <div class="toolbar-left">
+                    <button class="btn-secondary" id="clear-all-btn" onclick="clearAllFavorites()">
+                        <i data-lucide="trash-2"></i>
+                        Wyczyść wszystkie
+                    </button>
+                </div>
+                <div class="toolbar-right">
+                    <button class="btn-secondary" id="sort-btn" onclick="toggleSort()">
+                        <i data-lucide="arrow-up-down"></i>
+                        Sortuj
+                    </button>
+                    <button class="btn-secondary" id="grid-view-btn" onclick="toggleView('grid')" class="active">
+                        <i data-lucide="grid"></i>
+                    </button>
+                    <button class="btn-secondary" id="list-view-btn" onclick="toggleView('list')">
+                        <i data-lucide="list"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading-state" class="loading-container">
+                <div class="loading-spinner"></div>
+                <p>Ładowanie ulubionych produktów...</p>
+            </div>
+
+            <!-- Empty State -->
+            <div id="empty-state" class="empty-state" style="display: none;">
+                <div class="empty-content">
+                    <div class="empty-icon">
+                        <i data-lucide="heart"></i>
+                    </div>
+                    <h2>Brak ulubionych produktów</h2>
+                    <p>Nie masz jeszcze żadnych ulubionych produktów. Przeglądaj nasze produkty i dodawaj do ulubionych te, które Ci się podobają!</p>
+                    <a href="./index.html#produkty" class="btn-primary">
+                        <i data-lucide="shopping-bag"></i>
+                        Przeglądaj produkty
+                    </a>
+                </div>
+            </div>
+
+            <!-- Favorites Grid -->
+            <div id="favorites-content" class="favorites-grid" style="display: none;">
+                <!-- Favorite products will be loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Clear All Confirmation Modal -->
+    <div id="clear-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Wyczyść wszystkie ulubione</h3>
+                <button class="modal-close" onclick="closeClearModal()" aria-label="Zamknij">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Czy na pewno chcesz usunąć wszystkie produkty z listy ulubionych? Ta akcja nie może być cofnięta.</p>
+                <div class="modal-actions">
+                    <button class="btn-secondary" onclick="closeClearModal()">Anuluj</button>
+                    <button class="btn-danger" onclick="confirmClearAll()">
+                        <i data-lucide="trash-2"></i>
+                        Usuń wszystkie
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./images/logo-white.png" alt="BLANK SHOP" class="footer-logo-img">
+                    </div>
+                    <p class="footer-description">
+                        Twój ulubiony outlet online. Znajdź markowe produkty w najlepszych cenach.
+                    </p>
+                    <div class="footer-contact">
+                        <p><i data-lucide="phone"></i> +48 880 167 799</p>
+                        <p><i data-lucide="mail"></i> blankshop@onet.pl</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Obsługa klienta</h4>
+                    <ul class="footer-links">
+                        <li><a href="./regulamin.html">Regulamin</a></li>
+                        <li><a href="./polityka-prywatnosci.html">Polityka prywatności</a></li>
+                        <li><a href="./index.html#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Informacje</h4>
+                    <ul class="footer-links">
+                        <li><a href="./o-nas.html">O nas</a></li>
+                        <li><a href="./index.html#kategorie">Kategorie</a></li>
+                        <li><a href="./index.html#produkty">Produkty</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BLANK SHOP. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./js/app.js"></script>
+    <script src="./js/favorites.js"></script>
+    <script>
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+</html>

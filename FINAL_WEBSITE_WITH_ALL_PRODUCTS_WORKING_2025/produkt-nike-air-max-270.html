@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Air Max 270 Damskie - BLANK SHOP</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Nike Air Max 270 Damskie - Nowoczesne buty sportowe w promocyjnej cenie. BLANK SHOP - Twój ulubiony outlet online.">
+    <meta name="keywords" content="nike, air max 270, buty damskie, outlet, promocja">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Nike Air Max 270 Damskie - BLANK SHOP">
+    <meta property="og:description" content="Nowoczesne buty sportowe Nike Air Max 270 w promocyjnej cenie 399,99 zł">
+    <meta property="og:image" content="./images/products/nike-air-max-270.jpg">
+    <meta property="og:url" content="https://yoursite.com/produkt-nike-air-max-270.html">
+    <meta property="og:type" content="product">
+    
+    <!-- Schema.org Product -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Nike Air Max 270 Damskie",
+        "image": [
+            "./images/products/nike-air-max-270.jpg",
+            "./images/products/nike-air-max-270.jpg",
+            "./images/products/nike-air-max-270.jpg",
+            "./images/products/nike-air-max-270.jpg"
+        ],
+        "description": "Nowoczesne buty sportowe Nike Air Max 270 dla kobiet. Wygodne, stylowe i funkcjonalne.",
+        "brand": {
+            "@type": "Brand",
+            "name": "Nike"
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": "https://yoursite.com/produkt-nike-air-max-270.html",
+            "priceCurrency": "PLN",
+            "price": "399.99",
+            "priceValidUntil": "2025-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+                "@type": "Organization",
+                "name": "BLANK SHOP"
+            }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "reviewCount": "128"
+        }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="./index.html" class="flex items-center">
+                        <img src="./images/logo.png" alt="BLANK SHOP" class="h-10 w-auto">
+                    </a>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="./index.html" class="text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors">Strona główna</a>
+                    <a href="./index.html#promocje" class="text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors">Promocje</a>
+                    <a href="./index.html#kontakt" class="text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors">Kontakt</a>
+                </nav>
+
+                <!-- Search Bar -->
+                <div class="hidden md:flex items-center bg-gray-100 rounded-full px-4 py-2 max-w-md">
+                    <input type="text" id="search-input" placeholder="Szukaj produktów..." class="bg-transparent flex-1 outline-none text-sm search-input">
+                    <button class="search-btn text-gray-400 hover:text-gray-600" aria-label="Szukaj">
+                        <i data-lucide="search" class="h-4 w-4"></i>
+                    </button>
+                </div>
+
+                <!-- Actions -->
+                <div class="flex items-center space-x-4">
+                    <button class="favorite-btn p-2 text-gray-400 hover:text-red-500 transition-colors" onclick="toggleFavorite(1)">
+                        <i data-lucide="heart" class="h-5 w-5"></i>
+                    </button>
+                    <button class="p-2 text-gray-400 hover:text-gray-600 transition-colors" onclick="shareProduct()">
+                        <i data-lucide="share-2" class="h-5 w-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="flex items-center space-x-2 text-sm text-gray-500">
+                <a href="./index.html" class="hover:text-green-600 transition-colors">Strona główna</a>
+                <i data-lucide="chevron-right" class="h-4 w-4"></i>
+                <a href="./index.html#obuwie" class="hover:text-green-600 transition-colors">Obuwie</a>
+                <i data-lucide="chevron-right" class="h-4 w-4"></i>
+                <span class="text-gray-900">Nike Air Max 270 Damskie</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Product Gallery -->
+            <div class="space-y-4">
+                <!-- Main Image -->
+                <div class="relative group">
+                    <div class="aspect-square relative overflow-hidden rounded-lg bg-gray-100">
+                        <img 
+                            id="mainImage"
+                            src="./images/products/nike-air-max-270.jpg" 
+                            alt="Nike Air Max 270 - widok z boku"
+                            class="w-full h-full object-cover"
+                            onerror="this.src='./images/placeholder.jpg'"
+                        >
+                        
+                        <!-- Navigation arrows -->
+                        <button 
+                            id="prevBtn"
+                            class="absolute left-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 hover:bg-white p-2 rounded-full shadow-md"
+                            onclick="previousImage()"
+                        >
+                            <i data-lucide="chevron-left" class="h-4 w-4"></i>
+                        </button>
+                        <button 
+                            id="nextBtn"
+                            class="absolute right-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 hover:bg-white p-2 rounded-full shadow-md"
+                            onclick="nextImage()"
+                        >
+                            <i data-lucide="chevron-right" class="h-4 w-4"></i>
+                        </button>
+
+                        <!-- Image counter -->
+                        <div class="absolute bottom-2 left-2 bg-black/70 text-white px-2 py-1 rounded text-sm">
+                            <span id="imageCounter">1 / 4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thumbnails -->
+                <div class="grid grid-cols-4 gap-2">
+                    <button class="thumbnail active aspect-square relative overflow-hidden rounded-md border-2 border-green-500" onclick="setMainImage(0)">
+                        <img src="./images/products/nike-air-max-270.jpg" alt="Miniatura 1" class="w-full h-full object-cover" onerror="this.src='./images/placeholder.jpg'">
+                    </button>
+                    <button class="thumbnail aspect-square relative overflow-hidden rounded-md border-2 border-transparent hover:border-gray-300" onclick="setMainImage(1)">
+                        <img src="./images/products/nike-air-max-270.jpg" alt="Miniatura 2" class="w-full h-full object-cover" onerror="this.src='./images/placeholder.jpg'">
+                    </button>
+                    <button class="thumbnail aspect-square relative overflow-hidden rounded-md border-2 border-transparent hover:border-gray-300" onclick="setMainImage(2)">
+                        <img src="./images/products/nike-air-max-270.jpg" alt="Miniatura 3" class="w-full h-full object-cover" onerror="this.src='./images/placeholder.jpg'">
+                    </button>
+                    <button class="thumbnail aspect-square relative overflow-hidden rounded-md border-2 border-transparent hover:border-gray-300" onclick="setMainImage(3)">
+                        <img src="./images/products/nike-air-max-270.jpg" alt="Miniatura 4" class="w-full h-full object-cover" onerror="this.src='./images/placeholder.jpg'">
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="space-y-6">
+                <!-- Header -->
+                <div>
+                    <p class="text-sm text-gray-500 uppercase tracking-wide mb-2">Nike</p>
+                    <h1 class="text-3xl font-bold text-gray-900 mb-4">Nike Air Max 270 Damskie</h1>
+                    
+                    <!-- Badges -->
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="badge badge-featured">Polecane</span>
+                        <span class="badge badge-sale">-27% taniej</span>
+                        <span class="badge badge-new">Nowe</span>
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                            <i data-lucide="check" class="h-3 w-3 mr-1"></i>
+                            Dostępny
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Price -->
+                <div class="space-y-2">
+                    <div class="flex items-center gap-3">
+                        <span class="text-3xl font-bold text-green-600">399,99 zł</span>
+                        <span class="text-xl text-gray-500 line-through">549,99 zł</span>
+                    </div>
+                    <p class="text-sm text-green-600">
+                        Oszczędzasz 150,00 zł
+                    </p>
+                </div>
+
+                <div class="border-t border-gray-200 pt-6"></div>
+
+                <!-- Size Selection -->
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-gray-900">Rozmiar</h3>
+                    <div class="grid grid-cols-6 gap-2">
+                        <button class="size-btn aspect-square border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:border-green-500 transition-colors" onclick="selectSize(this, '36')">
+                            36
+                        </button>
+                        <button class="size-btn aspect-square border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:border-green-500 transition-colors" onclick="selectSize(this, '37')">
+                            37
+                        </button>
+                        <button class="size-btn aspect-square border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:border-green-500 transition-colors" onclick="selectSize(this, '38')">
+                            38
+                        </button>
+                        <button class="size-btn aspect-square border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:border-green-500 transition-colors" onclick="selectSize(this, '39')">
+                            39
+                        </button>
+                        <button class="size-btn aspect-square border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:border-green-500 transition-colors" onclick="selectSize(this, '40')">
+                            40
+                        </button>
+                        <button class="size-btn aspect-square border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:border-green-500 transition-colors" onclick="selectSize(this, '41')">
+                            41
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-500">Wybierz rozmiar</p>
+                </div>
+
+                <!-- Color Variants -->
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-gray-900">Kolor</h3>
+                    <div class="flex gap-3">
+                        <button class="variant-btn flex-1 border border-gray-300 rounded-lg p-3 text-left hover:border-green-500 transition-colors" onclick="selectVariant(this, 'white-pink')">
+                            <div class="font-medium">Białe/Różowe</div>
+                            <div class="text-sm text-gray-500">15 szt.</div>
+                        </button>
+                        <button class="variant-btn flex-1 border border-gray-300 rounded-lg p-3 text-left hover:border-green-500 transition-colors" onclick="selectVariant(this, 'black-gold')">
+                            <div class="font-medium">Czarne/Złote</div>
+                            <div class="text-sm text-gray-500">12 szt.</div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="flex gap-3 pt-4">
+                    <button 
+                        id="contactBtn"
+                        class="flex-1 bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition-colors font-medium flex items-center justify-center gap-2"
+                        onclick="contactAboutProduct()"
+                        disabled
+                    >
+                        <i data-lucide="phone" class="h-5 w-5"></i>
+                        Wybierz rozmiar
+                    </button>
+                    <button class="favorite-btn p-3 border border-gray-300 rounded-lg hover:border-red-500 hover:text-red-500 transition-colors" onclick="toggleFavorite(1)">
+                        <i data-lucide="heart" class="h-5 w-5"></i>
+                    </button>
+                    <button class="p-3 border border-gray-300 rounded-lg hover:border-green-500 hover:text-green-500 transition-colors" onclick="shareProduct()">
+                        <i data-lucide="share-2" class="h-5 w-5"></i>
+                    </button>
+                </div>
+
+                <!-- Product Info -->
+                <div class="bg-gray-50 rounded-lg p-6 space-y-4">
+                    <h3 class="font-semibold text-gray-900">Informacje o produkcie</h3>
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <span class="font-medium text-gray-700">Marka:</span>
+                            <span class="ml-2">Nike</span>
+                        </div>
+                        <div>
+                            <span class="font-medium text-gray-700">Kategoria:</span>
+                            <span class="ml-2">Obuwie</span>
+                        </div>
+                        <div>
+                            <span class="font-medium text-gray-700">Stan:</span>
+                            <span class="ml-2">Nowy</span>
+                        </div>
+                        <div>
+                            <span class="font-medium text-gray-700">Dostępność:</span>
+                            <span class="ml-2 text-green-600">27 sztuk</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 p-4 border rounded-lg">
+                        <i data-lucide="truck" class="h-5 w-5 text-green-600"></i>
+                        <div>
+                            <p class="font-medium">Darmowa dostawa</p>
+                            <p class="text-sm text-gray-500">Dla zamówień powyżej 200 zł</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-3 p-4 border rounded-lg">
+                        <i data-lucide="shield" class="h-5 w-5 text-blue-600"></i>
+                        <div>
+                            <p class="font-medium">Gwarancja jakości</p>
+                            <p class="text-sm text-gray-500">Sprawdzamy każdy produkt</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-3 p-4 border rounded-lg">
+                        <i data-lucide="rotate-ccw" class="h-5 w-5 text-purple-600"></i>
+                        <div>
+                            <p class="font-medium">Możliwość zwrotu</p>
+                            <p class="text-sm text-gray-500">14 dni na zwrot</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Description -->
+        <div class="mt-16 max-w-4xl">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Opis produktu</h2>
+            <div class="prose prose-lg max-w-none text-gray-700">
+                <p class="mb-4">
+                    <strong>Nike Air Max 270</strong> to nowoczesne buty sportowe, które łączą komfort, styl i funkcjonalność. 
+                    Zaprojektowane specjalnie dla kobiet, które cenią sobie jakość i wygodę.
+                </p>
+                
+                <h3 class="text-lg font-semibold mb-3">Najważniejsze cechy:</h3>
+                <ul class="list-disc list-inside space-y-2 mb-6">
+                    <li><strong>Technologia Air Max:</strong> Zapewnia wyjątkową amortyzację i komfort</li>
+                    <li><strong>Lekka konstrukcja:</strong> Idealna do całodziennego noszenia</li>
+                    <li><strong>Stylowy design:</strong> Pasuje do wielu stylizacji</li>
+                    <li><strong>Oddychający materiał:</strong> Zapewnia komfort przez cały dzień</li>
+                    <li><strong>Trwała podeszwa:</strong> Gwarantuje długotrwałe użytkowanie</li>
+                </ul>
+                
+                <p class="mb-4">
+                    Te buty są idealne zarówno do aktywności sportowych, jak i codziennego użytkowania. 
+                    Dostępne w atrakcyjnych kolorach, które podkreślą Twój indywidualny styl.
+                </p>
+                
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mt-6">
+                    <div class="flex items-start">
+                        <i data-lucide="info" class="h-5 w-5 text-yellow-600 mt-0.5 mr-3 flex-shrink-0"></i>
+                        <div>
+                            <h4 class="font-medium text-yellow-800 mb-1">Informacja o rozmiarach</h4>
+                            <p class="text-sm text-yellow-700">
+                                Buty są zgodne z rozmiarami. Jeśli nosisz rozmiar 38, zamów rozmiar 38. 
+                                W razie wątpliwości skontaktuj się z nami.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Back to top -->
+    <button 
+        id="backToTop"
+        class="fixed bottom-6 right-6 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-all transform translate-y-20 opacity-0"
+        onclick="scrollToTop()"
+    >
+        <i data-lucide="arrow-up" class="h-5 w-5"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="./js/app.js"></script>
+    <script src="./js/product.js"></script>
+    <script>
+        // Initialize icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

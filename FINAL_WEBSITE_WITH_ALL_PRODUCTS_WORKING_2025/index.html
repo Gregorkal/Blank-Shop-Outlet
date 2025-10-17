@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>BLANK SHOP - Twój ulubiony Outlet</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Odkryj najlepsze promocje i wyprzedaże w BLANK SHOP - Twoim ulubionym outlecie online">
+    <meta name="keywords" content="outlet, promocje, wyprzedaże, moda, obuwie, markowe ubrania">
+    <meta name="author" content="BLANK SHOP">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yoursite.com">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="BLANK SHOP - Twój ulubiony Outlet">
+    <meta property="og:description" content="Odkryj najlepsze promocje i wyprzedaże w BLANK SHOP - Twoim ulubionym outlecie online">
+    <meta property="og:image" content="./images/logo.png">
+    <meta property="og:url" content="https://yoursite.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BLANK SHOP - Twój ulubiony Outlet">
+    <meta name="twitter:description" content="Odkryj najlepsze promocje i wyprzedaże w BLANK SHOP - Twoim ulubionym outlecie online">
+    <meta name="twitter:image" content="./images/logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./images/logo.png" as="image">
+    <link rel="preload" href="./css/style.css" as="style">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="./images/icons/icon-192x192.png">
+    
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#f59e0b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="BLANK SHOP">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Lucide Icons - defer loading -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": ["OnlineStore", "Organization"],
+        "name": "BLANK SHOP",
+        "alternateName": "BLANK SHOP Outlet",
+        "description": "Twój ulubiony outlet online - markowe ubrania, buty i akcesoria w niskich cenach. Nike, Adidas, Zara i wiele innych marek w promocjach do 70%.",
+        "url": "https://yoursite.com",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://yoursite.com/images/logo.png",
+            "width": 100,
+            "height": 100
+        },
+        "image": "https://yoursite.com/images/logo.png",
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "telephone": "+48880167799",
+                "contactType": "customer service",
+                "email": "blankshop@onet.pl",
+                "availableLanguage": "Polish",
+                "areaServed": "PL",
+                "hoursAvailable": {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "09:00",
+                    "closes": "18:00"
+                }
+            }
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Grabowska 12",
+            "addressLocality": "Ostrów Wielkopolski",
+            "addressRegion": "Wielkopolskie",
+            "postalCode": "63-400",
+            "addressCountry": "PL"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "51.6520",
+            "longitude": "17.8110"
+        },
+        "sameAs": [
+            "https://www.facebook.com/okazjeoutlet"
+        ],
+        "paymentAccepted": ["BLIK", "Visa", "Mastercard", "PayPal", "Cash on Delivery"],
+        "currenciesAccepted": "PLN",
+        "openingHours": "Mo-Fr 09:00-18:00, Sa 10:00-16:00",
+        "priceRange": "29-679 PLN",
+        "serviceType": "Online Retail",
+        "areaServed": {
+            "@type": "Country",
+            "name": "Poland"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "BLANK SHOP Product Catalog",
+            "itemListElement": [
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Obuwie",
+                    "description": "Markowe buty sportowe i casualowe"
+                },
+                {
+                    "@type": "OfferCatalog", 
+                    "name": "Moda damska",
+                    "description": "Odzież damska wszystkich rozmiarów"
+                },
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Moda męska", 
+                    "description": "Odzież męska w najlepszych cenach"
+                },
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Akcesoria",
+                    "description": "Torebki, zegarki, biżuteria i inne akcesoria"
+                }
+            ]
+        },
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "PLN",
+            "lowPrice": "29",
+            "highPrice": "679",
+            "availability": "https://schema.org/InStock",
+            "url": "https://yoursite.com",
+            "seller": {
+                "@type": "Organization",
+                "name": "BLANK SHOP"
+            }
+        },
+        "founder": {
+            "@type": "Person",
+            "name": "BLANK SHOP Team"
+        },
+        "foundingDate": "2024",
+        "numberOfEmployees": "5-10",
+        "slogan": "Twój ulubiony outlet online"
+    }
+    </script>
+</head>
+<body class="font-inter">
+    <!-- Header -->
+    <header class="header-modern">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="./index.html" aria-label="BLANK SHOP - Strona główna">
+                        <img src="./images/logo.png" alt="BLANK SHOP" class="logo-img" width="100" height="100" loading="eager">
+                    </a>
+                </div>
+                
+                <!-- Navigation Desktop -->
+                <nav class="nav-desktop">
+                    <a href="./index.html" class="nav-link">Strona główna</a>
+                    <a href="#kategorie" class="nav-link">Kategorie</a>
+                    <a href="#produkty" class="nav-link">Produkty</a>
+                    <a href="#contact-details" class="nav-link">Kontakt</a>
+                    <a href="./o-nas.html" class="nav-link">O nas</a>
+                </nav>
+                
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Szukaj produktów..." class="search-input">
+                    <button class="search-btn" aria-label="Szukaj">
+                        <i data-lucide="search"></i>
+                    </button>
+                </div>
+                
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <a href="./favorites.html" class="icon-btn" aria-label="Ulubione">
+                        <i data-lucide="heart"></i>
+                        <span class="badge" id="favorites-count">0</span>
+                    </a>
+                    <a href="./cart.html" class="icon-btn" aria-label="Koszyk">
+                        <i data-lucide="shopping-bag"></i>
+                        <span class="badge" id="cart-count">0</span>
+                    </a>
+                    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav" id="mobile-nav">
+                <a href="./index.html" class="mobile-nav-link">Strona główna</a>
+                <a href="#kategorie" class="mobile-nav-link">Kategorie</a>
+                <a href="#produkty" class="mobile-nav-link">Produkty</a>
+                <a href="#contact-details" class="mobile-nav-link">Kontakt</a>
+                <a href="./o-nas.html" class="mobile-nav-link">O nas</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Odkryj najlepsze <span class="text-accent">okazje</span> w outlecie
+                    </h1>
+                    <p class="hero-subtitle">
+                        Markowe ubrania, buty i akcesoria do 70% taniej. 
+                        Znajdź swój styl w najlepszych cenach!
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#produkty" class="btn-primary">
+                            Przeglądaj produkty
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a href="#kategorie" class="btn-secondary">
+                            Zobacz kategorie
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-product-cards">
+                        <div class="floating-card card-1">
+                            <img src="./images/products/nike-air-max-270.jpg" alt="Nike Air Max" width="400" height="400" loading="lazy">
+                            <div class="card-content">
+                                <h2>Nike Air Max 270</h2>
+                                <p class="price">499 zł <span class="old-price">679 zł</span></p>
+                            </div>
+                        </div>
+                        <div class="floating-card card-2">
+                            <img src="./images/products/leather-bag.jpg" alt="Torebka skórzana" width="400" height="400" loading="lazy">
+                            <div class="card-content">
+                                <h2>Torebka Premium</h2>
+                                <p class="price">129 zł <span class="old-price">189 zł</span></p>
+                            </div>
+                        </div>
+                        <div class="floating-card card-3">
+                            <img src="./images/products/zara-coat.jpg" alt="Płaszcz Zara" width="400" height="400" loading="lazy">
+                            <div class="card-content">
+                                <h2>Płaszcz Zara</h2>
+                                <p class="price">259 zł <span class="old-price">399 zł</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i data-lucide="percent"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">30-70%</div>
+                        <p class="stat-text">Rabaty</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i data-lucide="truck"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">Darmowa</div>
+                        <p class="stat-text">Dostawa</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">100%</div>
+                        <p class="stat-text">Gwarancja</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i data-lucide="clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">24/7</div>
+                        <p class="stat-text">Obsługa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="kategorie">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Przeglądaj kategorie</h2>
+                <p class="section-subtitle">Znajdź dokładnie to, czego szukasz</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="./images/products/nike-air-max-270.jpg" alt="Obuwie" width="300" height="300" loading="lazy">
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">Obuwie</h3>
+                        <p class="category-count">120+ produktów</p>
+                        <a href="./obuwie.html" class="category-link">Zobacz wszystkie</a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="./images/products/zara-coat.jpg" alt="Moda damska" width="300" height="300" loading="lazy">
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">Moda damska</h3>
+                        <p class="category-count">200+ produktów</p>
+                        <a href="./moda-damska.html" class="category-link">Zobacz wszystkie</a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="./images/products/adidas-hoodie.jpg" alt="Moda męska" width="300" height="300" loading="lazy">
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">Moda męska</h3>
+                        <p class="category-count">150+ produktów</p>
+                        <a href="#" class="category-link">Zobacz wszystkie</a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="./images/products/leather-bag.jpg" alt="Akcesoria" width="300" height="300" loading="lazy">
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">Akcesoria</h3>
+                        <p class="category-count">80+ produktów</p>
+                        <a href="#" class="category-link">Zobacz wszystkie</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products" id="produkty">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Polecane produkty</h2>
+                <p class="section-subtitle">Najlepsze okazje tego tygodnia</p>
+            </div>
+            
+            <div class="products-grid" id="products-container">
+                <!-- Products will be loaded dynamically -->
+            </div>
+            
+            <div class="section-cta">
+                <a href="#produkty" class="btn-primary">Zobacz wszystkie produkty</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2 class="newsletter-title">Nie przegap najlepszych okazji!</h2>
+                    <p class="newsletter-subtitle">
+                        Zapisz się do newslettera i bądź pierwszy w kolejce do najnowszych promocji
+                    </p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Twój adres email" class="newsletter-input">
+                    <button type="submit" class="btn-primary">Zapisz się</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-content">
+                <h2 class="trust-title">Dlaczego warto nam zaufać?</h2>
+                
+                <div class="trust-features">
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h3>Bezpieczne płatności</h3>
+                        <p>SSL, BLIK, PayPal</p>
+                    </div>
+                    
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <i data-lucide="truck"></i>
+                        </div>
+                        <h3>Szybka dostawa</h3>
+                        <p>24h w całej Polsce</p>
+                    </div>
+                    
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <i data-lucide="refresh-cw"></i>
+                        </div>
+                        <h3>14 dni na zwrot</h3>
+                        <p>Bez pytań i problemów</p>
+                    </div>
+                    
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <i data-lucide="star"></i>
+                        </div>
+                        <h3>Tylko oryginały</h3>
+                        <p>Certyfikowane produkty</p>
+                    </div>
+                </div>
+                
+                <div class="payment-partners">
+                    <h3>Akceptujemy płatności:</h3>
+                    <div class="payment-logos">
+                        <span class="payment-item">BLIK</span>
+                        <span class="payment-item">Visa</span>
+                        <span class="payment-item">Mastercard</span>
+                        <span class="payment-item">PayPal</span>
+                        <span class="payment-item">Przelewy24</span>
+                    </div>
+                </div>
+                
+                <div class="shipping-partners">
+                    <h3>Dostawa przez:</h3>
+                    <div class="shipping-logos">
+                        <span class="shipping-item">DPD</span>
+                        <span class="shipping-item">InPost</span>
+                        <span class="shipping-item">Orlen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="kontakt">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./images/logo.png" alt="BLANK SHOP" class="footer-logo-img" width="80" height="80" loading="lazy">
+                    </div>
+                    <p class="footer-description">
+                        Twój ulubiony outlet online. Markowe produkty w najlepszych cenach.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/okazjeoutlet" class="social-link" aria-label="Facebook">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Kategorie</h3>
+                    <ul class="footer-links">
+                        <li><a href="./obuwie.html">Obuwie</a></li>
+                        <li><a href="./moda-damska.html">Moda damska</a></li>
+                        <li><a href="./moda-meska.html">Moda męska</a></li>
+                        <li><a href="./akcesoria.html">Akcesoria</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Sklep</h3>
+                    <ul class="footer-links">
+                        <li><a href="#kategorie">Kategorie</a></li>
+                        <li><a href="#produkty">Produkty</a></li>
+                        <li><a href="./o-nas.html">O nas</a></li>
+                        <li><a href="./kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Pomoc</h3>
+                    <ul class="footer-links">
+                        <li><a href="./dostawa-i-platnosci.html">Dostawa i płatności</a></li>
+                        <li><a href="./zwroty.html">Zwroty i reklamacje</a></li>
+                        <li><a href="./regulamin.html">Regulamin</a></li>
+                        <li><a href="./polityka-prywatnosci.html">Polityka prywatności</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Kontakt</h3>
+                    <div class="contact-info" id="contact-details">
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <a href="https://www.google.com/maps/search/ul.+Grabowska+12,+63-400+Ostrów+Wielkopolski" target="_blank" class="contact-link">
+                                <span>ul. Grabowska 12<br>63-400 Ostrów Wielkopolski</span>
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <a href="tel:+48880167799" class="contact-link">+48 880 167 799</a>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <a href="mailto:blankshop@onet.pl" class="contact-link">blankshop@onet.pl</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">
+                        © 2025 BLANK SHOP. Wszystkie prawa zastrzeżone.
+                    </p>
+                    <div class="footer-bottom-links">
+                        <a href="./regulamin.html">Regulamin</a>
+                        <a href="./polityka-prywatnosci.html">Polityka prywatności</a>
+                        <a href="#">Pliki cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./js/app.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+</html>

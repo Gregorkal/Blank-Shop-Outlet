@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yoursite.com/sitemap.xml
+
+# Disallow admin areas and user files
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cart.html
+Disallow: /checkout.html
+Disallow: /favorites.html
+Disallow: /order-success.html
+
+# Allow all CSS and JS files
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /data/
+
+# Crawl delay
+Crawl-delay: 1

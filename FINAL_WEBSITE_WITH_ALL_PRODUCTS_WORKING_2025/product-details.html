@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Szczegóły produktu - BLANK SHOP</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" id="page-description" content="Szczegóły produktu - BLANK SHOP - Twój ulubiony outlet online.">
+    <meta name="keywords" id="page-keywords" content="outlet, promocja, moda">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" id="og-title" content="Szczegóły produktu - BLANK SHOP">
+    <meta property="og:description" id="og-description" content="Szczegóły produktu w BLANK SHOP">
+    <meta property="og:image" id="og-image" content="./images/placeholder.jpg">
+    <meta property="og:url" content="https://yoursite.com/product-details.html">
+    <meta property="og:type" content="product">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="font-inter">
+    <!-- Header -->
+    <header class="header-modern">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="./index.html" aria-label="BLANK SHOP - Strona główna">
+                        <img src="./images/logo.png" alt="BLANK SHOP" class="logo-img">
+                    </a>
+                </div>
+                
+                <!-- Navigation Desktop -->
+                <nav class="nav-desktop">
+                    <a href="./index.html" class="nav-link">Strona główna</a>
+                    <a href="./index.html#kategorie" class="nav-link">Kategorie</a>
+                    <a href="./index.html#produkty" class="nav-link">Produkty</a>
+                    <a href="./index.html#kontakt" class="nav-link">Kontakt</a>
+                    <a href="./o-nas.html" class="nav-link">O nas</a>
+                </nav>
+                
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Szukaj produktów..." class="search-input">
+                    <button class="search-btn" aria-label="Szukaj">
+                        <i data-lucide="search"></i>
+                    </button>
+                </div>
+                
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <button class="icon-btn favorite-btn" id="favorite-btn" aria-label="Dodaj/usuń z ulubionych">
+                        <i data-lucide="heart"></i>
+                    </button>
+                    <a href="./favorites.html" class="icon-btn" aria-label="Zobacz ulubione">
+                        <i data-lucide="heart"></i>
+                        <span class="badge" id="favorites-count">0</span>
+                    </a>
+                    <button class="icon-btn" aria-label="Udostępnij" onclick="shareProduct()">
+                        <i data-lucide="share-2"></i>
+                    </button>
+                    <button class="icon-btn" onclick="window.history.back()" aria-label="Wróć">
+                        <i data-lucide="arrow-left"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="./index.html" class="breadcrumb-link">Strona główna</a>
+                <span class="breadcrumb-separator">/</span>
+                <span id="breadcrumb-category" class="breadcrumb-current">Produkty</span>
+                <span class="breadcrumb-separator">/</span>
+                <span id="breadcrumb-product" class="breadcrumb-current">Szczegóły</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Loading State -->
+    <div id="loading-state" class="loading-container">
+        <div class="loading-spinner"></div>
+        <p>Ładowanie szczegółów produktu...</p>
+    </div>
+
+    <!-- Error State -->
+    <div id="error-state" class="error-container" style="display: none;">
+        <div class="error-content">
+            <i data-lucide="alert-circle" class="error-icon"></i>
+            <h2>Produkt nie został znaleziony</h2>
+            <p>Przepraszamy, nie można znaleźć szczegółów tego produktu.</p>
+            <a href="./index.html" class="btn-primary">Wróć do strony głównej</a>
+        </div>
+    </div>
+
+    <!-- Product Details -->
+    <main id="product-content" class="product-details" style="display: none;">
+        <div class="container">
+            <div class="product-layout">
+                <!-- Product Images -->
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="main-image" src="" alt="" class="main-img">
+                        <div class="image-counter">
+                            <span id="current-image">1</span> / <span id="total-images">1</span>
+                        </div>
+                        <button class="image-nav prev" onclick="previousImage()" aria-label="Poprzednie zdjęcie">
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+                        <button class="image-nav next" onclick="nextImage()" aria-label="Następne zdjęcie">
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="image-thumbnails" id="thumbnails">
+                        <!-- Thumbnails will be generated here -->
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <!-- Product Header -->
+                    <div class="product-header">
+                        <div class="product-badge" id="product-badge" style="display: none;">
+                            <span class="badge-text">-20%</span>
+                        </div>
+                        <div class="product-brand" id="product-brand">Marka</div>
+                        <h1 class="product-title" id="product-title">Nazwa produktu</h1>
+                        <div class="product-description" id="product-description">
+                            Opis produktu będzie tutaj wyświetlony.
+                        </div>
+                    </div>
+
+                    <!-- Product Price -->
+                    <div class="product-pricing">
+                        <div class="price-container">
+                            <span class="current-price" id="current-price">0,00 zł</span>
+                            <span class="original-price" id="original-price" style="display: none;">0,00 zł</span>
+                        </div>
+                        <div class="savings" id="savings" style="display: none;">
+                            Oszczędzasz: <span class="savings-amount">0,00 zł</span>
+                        </div>
+                    </div>
+
+                    <!-- Product Condition -->
+                    <div class="product-condition">
+                        <div class="condition-item">
+                            <i data-lucide="package"></i>
+                            <span>Stan: <strong id="product-condition">Nowy</strong></span>
+                        </div>
+                        <div class="condition-item">
+                            <i data-lucide="truck"></i>
+                            <span>Darmowa dostawa</span>
+                        </div>
+                        <div class="condition-item">
+                            <i data-lucide="shield-check"></i>
+                            <span>Gwarancja zwrotu</span>
+                        </div>
+                    </div>
+
+                    <!-- Contact Actions -->
+                    <div class="product-actions">
+                        <button class="btn-primary contact-btn" onclick="contactAboutProduct()">
+                            <i data-lucide="phone"></i>
+                            Zapytaj o produkt
+                        </button>
+                        <button class="btn-secondary favorite-toggle" onclick="toggleFavorite()">
+                            <i data-lucide="heart"></i>
+                            Dodaj do ulubionych
+                        </button>
+                    </div>
+
+                    <!-- Share Options -->
+                    <div class="share-options">
+                        <span class="share-label">Udostępnij:</span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareOnFacebook()" aria-label="Udostępnij na Facebook">
+                                <i data-lucide="facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareOnTwitter()" aria-label="Udostępnij na Twitter">
+                                <i data-lucide="twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="copyLink()" aria-label="Kopiuj link">
+                                <i data-lucide="link"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Zapytaj o produkt</h3>
+                <button class="modal-close" onclick="closeContactModal()" aria-label="Zamknij">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Jesteś zainteresowany tym produktem?</p>
+                <div class="contact-options">
+                    <a href="tel:+48880167799" class="contact-option">
+                        <i data-lucide="phone"></i>
+                        <div>
+                            <strong>Zadzwoń</strong>
+                            <span>+48 880 167 799</span>
+                        </div>
+                    </a>
+                    <a href="mailto:blankshop@onet.pl" class="contact-option">
+                        <i data-lucide="mail"></i>
+                        <div>
+                            <strong>Napisz email</strong>
+                            <span>blankshop@onet.pl</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./images/logo-white.png" alt="BLANK SHOP" class="footer-logo-img">
+                    </div>
+                    <p class="footer-description">
+                        Twój ulubiony outlet online. Znajdź markowe produkty w najlepszych cenach.
+                    </p>
+                    <div class="footer-contact">
+                        <p><i data-lucide="phone"></i> +48 880 167 799</p>
+                        <p><i data-lucide="mail"></i> blankshop@onet.pl</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Obsługa klienta</h4>
+                    <ul class="footer-links">
+                        <li><a href="./regulamin.html">Regulamin</a></li>
+                        <li><a href="./polityka-prywatnosci.html">Polityka prywatności</a></li>
+                        <li><a href="./index.html#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Informacje</h4>
+                    <ul class="footer-links">
+                        <li><a href="./o-nas.html">O nas</a></li>
+                        <li><a href="./index.html#kategorie">Kategorie</a></li>
+                        <li><a href="./index.html#produkty">Produkty</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BLANK SHOP. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./js/app.js"></script>
+    <script src="./js/product-details.js"></script>
+    <script>
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+</html>

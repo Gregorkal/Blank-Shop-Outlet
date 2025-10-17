@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metody płatności - BLANK SHOP</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Poznaj wszystkie dostępne metody płatności w BLANK SHOP - BLIK, karty, przelewy online, PayPal i więcej.">
+    <meta name="keywords" content="metody płatności, BLIK, karty płatnicze, przelewy online, PayPal, BLANK SHOP">
+    <meta name="author" content="BLANK SHOP">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Metody płatności - BLANK SHOP">
+    <meta property="og:description" content="Bezpieczne i wygodne metody płatności w BLANK SHOP">
+    <meta property="og:image" content="./images/logo.png">
+    <meta property="og:url" content="https://yoursite.com/payment-methods.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="font-inter">
+    <!-- Header -->
+    <header class="header-modern">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="./index.html" aria-label="BLANK SHOP - Strona główna">
+                        <img src="./images/logo.png" alt="BLANK SHOP" class="logo-img">
+                    </a>
+                </div>
+                
+                <!-- Navigation Desktop -->
+                <nav class="nav-desktop">
+                    <a href="./index.html" class="nav-link">Strona główna</a>
+                    <a href="./index.html#kategorie" class="nav-link">Kategorie</a>
+                    <a href="./index.html#produkty" class="nav-link">Produkty</a>
+                    <a href="./o-nas.html" class="nav-link">O nas</a>
+                </nav>
+                
+                <!-- Search -->
+                <div class="search-container">
+                    <input type="text" placeholder="Szukaj produktów..." class="search-input">
+                    <button class="search-btn" aria-label="Szukaj">
+                        <i data-lucide="search"></i>
+                    </button>
+                </div>
+                
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <a href="./favorites.html" class="icon-btn" aria-label="Ulubione">
+                        <i data-lucide="heart"></i>
+                        <span class="badge" id="favorites-count">0</span>
+                    </a>
+                    <a href="./cart.html" class="icon-btn" aria-label="Koszyk">
+                        <i data-lucide="shopping-bag"></i>
+                        <span class="badge" id="cart-count">0</span>
+                    </a>
+                    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="./index.html">Strona główna</a>
+                <span class="separator">/</span>
+                <a href="./cart.html">Koszyk</a>
+                <span class="separator">/</span>
+                <span class="current">Metody płatności</span>
+            </nav>
+
+            <!-- Page Header -->
+            <section class="page-header">
+                <div class="page-header-content">
+                    <h1 class="page-title">
+                        <i data-lucide="credit-card"></i>
+                        Metody płatności
+                    </h1>
+                    <p class="page-subtitle">Wybierz najwygodniejszą dla siebie metodę płatności</p>
+                </div>
+            </section>
+
+            <!-- Payment Methods Content -->
+            <section class="payment-methods-section">
+                <div class="payment-methods-container">
+                    
+                    <!-- Instant Payments Section -->
+                    <div class="payment-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i data-lucide="zap"></i>
+                            </div>
+                            <div class="category-info">
+                                <h2>I. Płatności natychmiastowe (online)</h2>
+                                <p>Szybkie i bezpieczne płatności realizowane w czasie rzeczywistym</p>
+                            </div>
+                        </div>
+
+                        <div class="payment-methods-grid">
+                            <!-- BLIK -->
+                            <div class="payment-method-card featured">
+                                <div class="method-header">
+                                    <div class="method-icon blik">
+                                        <i data-lucide="smartphone"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <h3>BLIK</h3>
+                                        <span class="method-badge popular">Najpopularniejsza</span>
+                                    </div>
+                                </div>
+                                <p class="method-description">
+                                    Najpopularniejsza metoda płatności w Polsce. Płatność kodem 6-cyfrowym lub BLIK z potwierdzeniem w aplikacji bankowej.
+                                </p>
+                                <div class="method-features">
+                                    <span class="feature">✓ Natychmiastowa</span>
+                                    <span class="feature">✓ Bezpieczna</span>
+                                    <span class="feature">✓ Bez prowizji</span>
+                                </div>
+                            </div>
+
+                            <!-- Quick Transfers -->
+                            <div class="payment-method-card">
+                                <div class="method-header">
+                                    <div class="method-icon transfer">
+                                        <i data-lucide="arrow-right-left"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <h3>Szybkie przelewy online</h3>
+                                        <span class="method-badge">Pay-by-link</span>
+                                    </div>
+                                </div>
+                                <p class="method-description">
+                                    Przelewy24, PayU, Tpay, Dotpay, BlueMedia, Paynow, Autopay - natychmiastowe przelewy z konta bankowego.
+                                </p>
+                                <div class="method-logos">
+                                    <span class="provider-logo">P24</span>
+                                    <span class="provider-logo">PayU</span>
+                                    <span class="provider-logo">Tpay</span>
+                                </div>
+                            </div>
+
+                            <!-- Mobile Payments -->
+                            <div class="payment-method-card">
+                                <div class="method-header">
+                                    <div class="method-icon mobile">
+                                        <i data-lucide="phone"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <h3>Apple Pay / Google Pay</h3>
+                                        <span class="method-badge">Mobilne</span>
+                                    </div>
+                                </div>
+                                <p class="method-description">
+                                    Płatności mobilne powiązane z kartą w portfelu telefonu. Szybko i bezpiecznie.
+                                </p>
+                                <div class="method-logos">
+                                    <span class="provider-logo apple">🍎</span>
+                                    <span class="provider-logo google">G</span>
+                                </div>
+                            </div>
+
+                            <!-- Card Payments -->
+                            <div class="payment-method-card">
+                                <div class="method-header">
+                                    <div class="method-icon card">
+                                        <i data-lucide="credit-card"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <h3>Płatność kartą płatniczą</h3>
+                                        <span class="method-badge">Online</span>
+                                    </div>
+                                </div>
+                                <p class="method-description">
+                                    Visa, Mastercard, Maestro, Diners Club, American Express, Revolut, Curve - wszystkie główne karty.
+                                </p>
+                                <div class="method-logos">
+                                    <span class="provider-logo visa">VISA</span>
+                                    <span class="provider-logo mc">MC</span>
+                                    <span class="provider-logo amex">AMEX</span>
+                                </div>
+                            </div>
+
+                            <!-- PayPal -->
+                            <div class="payment-method-card">
+                                <div class="method-header">
+                                    <div class="method-icon paypal">
+                                        <i data-lucide="wallet"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <h3>PayPal</h3>
+                                        <span class="method-badge">Globalna</span>
+                                    </div>
+                                </div>
+                                <p class="method-description">
+                                    Płatność z konta PayPal lub kartą przez ich bramkę. Ochrona kupujących i sprzedawców.
+                                </p>
+                                <div class="method-features">
+                                    <span class="feature">✓ Ochrona kupujących</span>
+                                    <span class="feature">✓ Międzynarodowa</span>
+                                </div>
+                            </div>
+
+                            <!-- International -->
+                            <div class="payment-method-card">
+                                <div class="method-header">
+                                    <div class="method-icon international">
+                                        <i data-lucide="globe"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <h3>Płatności zagraniczne</h3>
+                                        <span class="method-badge">International</span>
+                                    </div>
+                                </div>
+                                <p class="method-description">
+                                    Revolut Pay, Klarna Pay Now, Trustly, Sofort - szybkie płatności międzybankowe dla klientów zagranicznych.
+                                </p>
+                                <div class="method-logos">
+                                    <span class="provider-logo">Revolut</span>
+                                    <span class="provider-logo">Klarna</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Traditional Payments Section -->
+                    <div class="payment-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i data-lucide="building-2"></i>
+                            </div>
+                            <div class="category-info">
+                                <h2>II. Płatności tradycyjne</h2>
+                                <p>Klasyczne metody płatności z dłuższym czasem realizacji</p>
+                            </div>
+                        </div>
+
+                        <div class="payment-methods-grid">
+                            <!-- Bank Transfer -->
+                            <div class="payment-method-card">
+                                <div class="method-header">
+                                    <div class="method-icon bank">
+                                        <i data-lucide="landmark"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <h3>Przelew bankowy tradycyjny</h3>
+                                        <span class="method-badge">1-2 dni</span>
+                                    </div>
+                                </div>
+                                <p class="method-description">
+                                    Przelew na rachunek sklepu realizowany ręcznie przez klienta. Zaksięgowany zwykle po 1–2 dniach roboczych.
+                                </p>
+                                
+                                <!-- Bank Account Details -->
+                                <div class="bank-account-details">
+                                    <h4 class="account-title">
+                                        <i data-lucide="building-2"></i>
+                                        Dane do przelewu:
+                                    </h4>
+                                    <div class="account-info">
+                                        <div class="bank-logo">
+                                            <div class="mbank-logo">mBank</div>
+                                        </div>
+                                        <div class="account-data">
+                                            <div class="account-row">
+                                                <span class="account-label">Numer konta:</span>
+                                                <span class="account-number" id="account-number">71 1140 2004 0000 3302 6094 1548</span>
+                                                <button class="copy-btn" onclick="copyAccountNumber()" title="Skopiuj numer konta">
+                                                    <i data-lucide="copy"></i>
+                                                </button>
+                                            </div>
+                                            <div class="account-row">
+                                                <span class="account-label">Odbiorca:</span>
+                                                <span class="account-value">BLANK SHOP</span>
+                                            </div>
+                                            <div class="account-row">
+                                                <span class="account-label">Tytuł przelewu:</span>
+                                                <span class="account-value">Zamówienie nr [NUMER_ZAMÓWIENIA]</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-features">
+                                    <span class="feature">✓ Brak prowizji</span>
+                                    <span class="feature">⏳ 1-2 dni robocze</span>
+                                    <span class="feature">💳 mBank</span>
+                                </div>
+                            </div>
+
+                            <!-- Cash on Delivery -->
+                            <div class="payment-method-card">
+                                <div class="method-header">
+                                    <div class="method-icon cod">
+                                        <i data-lucide="truck"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <h3>Płatność przy odbiorze</h3>
+                                        <span class="method-badge">Za pobraniem</span>
+                                    </div>
+                                </div>
+                                <p class="method-description">
+                                    Gotówką lub kartą u kuriera / w paczkomacie (InPost, DPD, DHL, Poczta Polska).
+                                </p>
+                                <div class="method-logos">
+                                    <span class="provider-logo">InPost</span>
+                                    <span class="provider-logo">DPD</span>
+                                    <span class="provider-logo">DHL</span>
+                                </div>
+                            </div>
+
+                            <!-- Personal Pickup -->
+                            <div class="payment-method-card">
+                                <div class="method-header">
+                                    <div class="method-icon pickup">
+                                        <i data-lucide="map-pin"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <h3>Gotówka przy odbiorze osobistym</h3>
+                                        <span class="method-badge">Stacjonarnie</span>
+                                    </div>
+                                </div>
+                                <p class="method-description">
+                                    Płatność gotówką w punkcie stacjonarnym sklepu lub magazynie przy odbiorze osobistym.
+                                </p>
+                                <div class="method-features">
+                                    <span class="feature">✓ Bez prowizji</span>
+                                    <span class="feature">✓ Odbiór osobisty</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BLIK Banks Section -->
+                    <div class="payment-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <div class="blik-logo">BLIK</div>
+                            </div>
+                            <div class="category-info">
+                                <h2>Banki obsługujące BLIK w Polsce</h2>
+                                <p>Lista głównych instytucji finansowych oferujących płatności BLIK</p>
+                            </div>
+                        </div>
+
+                        <div class="banks-grid">
+                            <div class="bank-item">
+                                <div class="bank-icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <span>PKO Bank Polski</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <span>Bank Millennium</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <span>ING Bank Śląski</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <span>mBank</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <span>Santander Bank</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <span>Bank Pekao S.A.</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <span>Alior Bank</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <span>BNP Paribas</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <span>Credit Agricole</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <span>Nest Bank</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <span>Bank Pocztowy</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <span>Revolut</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <span>BOŚ Bank</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <span>Citi Handlowy</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <span>SGB Banki Spółdzielcze</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <span>I inne banki spółdzielcze</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security Info -->
+                    <div class="security-section">
+                        <div class="security-header">
+                            <div class="security-icon">
+                                <i data-lucide="shield-check"></i>
+                            </div>
+                            <h2>Bezpieczeństwo płatności</h2>
+                        </div>
+                        <div class="security-features">
+                            <div class="security-feature">
+                                <i data-lucide="lock"></i>
+                                <div>
+                                    <h3>Szyfrowanie SSL</h3>
+                                    <p>Wszystkie dane są szyfrowane protokołem SSL 256-bit</p>
+                                </div>
+                            </div>
+                            <div class="security-feature">
+                                <i data-lucide="shield"></i>
+                                <div>
+                                    <h3>3D Secure</h3>
+                                    <p>Dodatkowa autoryzacja dla płatności kartą</p>
+                                </div>
+                            </div>
+                            <div class="security-feature">
+                                <i data-lucide="check-circle"></i>
+                                <div>
+                                    <h3>Certyfikaty PCI DSS</h3>
+                                    <p>Zgodność z najwyższymi standardami bezpieczeństwa</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="payment-actions">
+                        <a href="./checkout.html" class="btn-primary">
+                            <i data-lucide="arrow-right"></i>
+                            Przejdź do płatności
+                        </a>
+                        <a href="./cart.html" class="btn-secondary">
+                            <i data-lucide="arrow-left"></i>
+                            Wróć do koszyka
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="./images/logo-white.png" alt="BLANK SHOP" class="footer-logo-img">
+                    <p class="footer-description">
+                        Twój niezawodny partner w świecie mody. Odkryj najlepsze marki w wyjątkowych cenach.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Szybkie linki</h4>
+                    <ul class="footer-links">
+                        <li><a href="./index.html">Strona główna</a></li>
+                        <li><a href="./index.html#kategorie">Kategorie</a></li>
+                        <li><a href="./index.html#produkty">Produkty</a></li>
+                        <li><a href="./o-nas.html">O nas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Pomoc</h4>
+                    <ul class="footer-links">
+                        <li><a href="./regulamin.html">Regulamin</a></li>
+                        <li><a href="./polityka-prywatnosci.html">Polityka prywatności</a></li>
+                        <li><a href="./payment-methods.html">Metody płatności</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BLANK SHOP. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/app.js"></script>
+    <script src="./js/cart.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Update cart count on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartManager = window.cartManager;
+            if (cartManager) {
+                cartManager.updateCartCount();
+            }
+        });
+        
+        // Copy account number function
+        function copyAccountNumber() {
+            const accountNumber = document.getElementById('account-number').textContent;
+            navigator.clipboard.writeText(accountNumber).then(() => {
+                // Show success notification
+                showCopyNotification('Numer konta skopiowany!');
+            }).catch(() => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = accountNumber;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showCopyNotification('Numer konta skopiowany!');
+            });
+        }
+        
+        // Show copy notification
+        function showCopyNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'copy-notification';
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <i data-lucide="check-circle"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Initialize icon
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+            
+            setTimeout(() => notification.classList.add('show'), 100);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

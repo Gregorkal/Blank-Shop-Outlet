@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Płatność - BLANK SHOP</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Finalizuj swoje zakupy w BLANK SHOP - bezpieczne płatności i szybka dostawa.">
+    <meta name="keywords" content="płatność, checkout, zakupy, outlet, BLANK SHOP">
+    <meta name="author" content="BLANK SHOP">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Płatność - BLANK SHOP">
+    <meta property="og:description" content="Bezpieczne płatności w BLANK SHOP">
+    <meta property="og:image" content="./images/logo.png">
+    <meta property="og:url" content="https://yoursite.com/checkout.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="font-inter">
+    <!-- Header -->
+    <header class="header-modern">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="./index.html" aria-label="BLANK SHOP - Strona główna">
+                        <img src="./images/logo.png" alt="BLANK SHOP" class="logo-img">
+                    </a>
+                </div>
+                
+                <!-- Navigation Desktop -->
+                <nav class="nav-desktop">
+                    <a href="./index.html" class="nav-link">Strona główna</a>
+                    <a href="./index.html#kategorie" class="nav-link">Kategorie</a>
+                    <a href="./index.html#produkty" class="nav-link">Produkty</a>
+                    <a href="./o-nas.html" class="nav-link">O nas</a>
+                </nav>
+                
+                <!-- Search -->
+                <div class="search-container">
+                    <input type="text" placeholder="Szukaj produktów..." class="search-input">
+                    <button class="search-btn" aria-label="Szukaj">
+                        <i data-lucide="search"></i>
+                    </button>
+                </div>
+                
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <a href="./favorites.html" class="icon-btn" aria-label="Ulubione">
+                        <i data-lucide="heart"></i>
+                        <span class="badge" id="favorites-count">0</span>
+                    </a>
+                    <a href="./cart.html" class="icon-btn" aria-label="Koszyk">
+                        <i data-lucide="shopping-bag"></i>
+                        <span class="badge" id="cart-count">0</span>
+                    </a>
+                    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="./index.html">Strona główna</a>
+                <span class="separator">/</span>
+                <a href="./cart.html">Koszyk</a>
+                <span class="separator">/</span>
+                <span class="current">Płatność</span>
+            </nav>
+
+            <!-- Page Header -->
+            <section class="page-header">
+                <div class="page-header-content">
+                    <h1 class="page-title">Finalizacja zamówienia</h1>
+                    <p class="page-subtitle">Uzupełnij dane do wysyłki i wybierz metodę płatności</p>
+                </div>
+            </section>
+
+            <!-- Checkout Content -->
+            <section class="checkout-section">
+                <div class="checkout-container">
+                    <!-- Checkout Form -->
+                    <div class="checkout-form">
+                        <form id="checkout-form">
+                            <!-- Shipping Information -->
+                            <div class="form-section">
+                                <h2 class="form-section-title">
+                                    <i data-lucide="truck"></i>
+                                    Dane do wysyłki
+                                </h2>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">Imię *</label>
+                                        <input type="text" id="firstName" name="firstName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Nazwisko *</label>
+                                        <input type="text" id="lastName" name="lastName" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Adres e-mail *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Numer telefonu *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="address">Adres *</label>
+                                    <input type="text" id="address" name="address" required>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="city">Miasto *</label>
+                                        <input type="text" id="city" name="city" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="postalCode">Kod pocztowy *</label>
+                                        <input type="text" id="postalCode" name="postalCode" pattern="[0-9]{2}-[0-9]{3}" placeholder="00-000" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Payment Method -->
+                            <div class="form-section">
+                                <h2 class="form-section-title">
+                                    <i data-lucide="credit-card"></i>
+                                    Metoda płatności
+                                </h2>
+                                
+                                <div class="payment-methods">
+                                    <div class="payment-option">
+                                        <input type="radio" id="card" name="paymentMethod" value="card" checked>
+                                        <label for="card" class="payment-option-label">
+                                            <div class="payment-option-content">
+                                                <i data-lucide="credit-card"></i>
+                                                <span>Karta płatnicza</span>
+                                            </div>
+                                            <div class="payment-cards">
+                                                <span class="card-type">VISA</span>
+                                                <span class="card-type">MC</span>
+                                                <span class="card-type">BLIK</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="payment-option">
+                                        <input type="radio" id="blik" name="paymentMethod" value="blik">
+                                        <label for="blik" class="payment-option-label">
+                                            <div class="payment-option-content">
+                                                <i data-lucide="smartphone"></i>
+                                                <span>BLIK</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="payment-option">
+                                        <input type="radio" id="transfer" name="paymentMethod" value="transfer">
+                                        <label for="transfer" class="payment-option-label">
+                                            <div class="payment-option-content">
+                                                <i data-lucide="building-2"></i>
+                                                <span>Przelew bankowy</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="payment-option">
+                                        <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                                        <label for="paypal" class="payment-option-label">
+                                            <div class="payment-option-content">
+                                                <i data-lucide="wallet"></i>
+                                                <span>PayPal</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Card Details Form -->
+                                <div class="card-details" id="card-details">
+                                    <div class="form-group">
+                                        <label for="cardNumber">Numer karty *</label>
+                                        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="expiryDate">Data ważności *</label>
+                                            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cvv">CVV *</label>
+                                            <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="cardName">Imię i nazwisko na karcie *</label>
+                                        <input type="text" id="cardName" name="cardName">
+                                    </div>
+                                </div>
+
+                                <!-- BLIK Code Form -->
+                                <div class="blik-details" id="blik-details" style="display: none;">
+                                    <div class="form-group">
+                                        <label for="blikCode">Kod BLIK *</label>
+                                        <input type="text" id="blikCode" name="blikCode" placeholder="123 456" maxlength="7">
+                                        <small class="form-help">Wygeneruj kod w aplikacji bankowej</small>
+                                    </div>
+                                </div>
+
+                                <!-- Bank Transfer Details -->
+                                <div class="transfer-details" id="transfer-details" style="display: none;">
+                                    <div class="bank-account-details">
+                                        <h4 class="account-title">
+                                            <i data-lucide="building-2"></i>
+                                            Dane do przelewu:
+                                        </h4>
+                                        <div class="account-info">
+                                            <div class="bank-logo">
+                                                <div class="mbank-logo">mBank</div>
+                                            </div>
+                                            <div class="account-data">
+                                                <div class="account-row">
+                                                    <span class="account-label">Numer konta:</span>
+                                                    <span class="account-number" id="checkout-account-number">71 1140 2004 0000 3302 6094 1548</span>
+                                                    <button type="button" class="copy-btn" onclick="copyCheckoutAccountNumber()" title="Skopiuj numer konta">
+                                                        <i data-lucide="copy"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="account-row">
+                                                    <span class="account-label">Odbiorca:</span>
+                                                    <span class="account-value">BLANK SHOP</span>
+                                                </div>
+                                                <div class="account-row">
+                                                    <span class="account-label">Tytuł przelewu:</span>
+                                                    <span class="account-value">Podamy po złożeniu zamówienia</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="transfer-note">
+                                            <i data-lucide="info"></i>
+                                            <p>Po złożeniu zamówienia otrzymasz e-mail z dokładnymi danymi do przelewu, w tym z tytułem zawierającym numer zamówienia.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Terms and Conditions -->
+                            <div class="form-section">
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <label for="terms">
+                                        Akceptuję <a href="./regulamin.html" target="_blank">regulamin sklepu</a> i <a href="./polityka-prywatnosci.html" target="_blank">politykę prywatności</a> *
+                                    </label>
+                                </div>
+                                
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <label for="newsletter">
+                                        Chcę otrzymywać newsletter z ofertami i promocjami
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Order Summary -->
+                    <div class="order-summary">
+                        <div class="summary-card">
+                            <h3>Twoje zamówienie</h3>
+                            
+                            <!-- Order Items -->
+                            <div class="order-items" id="order-items">
+                                <!-- Items will be populated by JavaScript -->
+                            </div>
+                            
+                            <!-- Promo Code -->
+                            <div class="promo-section">
+                                <div class="promo-input">
+                                    <input type="text" id="promoCode" placeholder="Kod rabatowy">
+                                    <button type="button" id="apply-promo">Zastosuj</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Order Totals -->
+                            <div class="order-totals">
+                                <div class="total-row">
+                                    <span>Produkty (<span id="total-items">0</span>)</span>
+                                    <span id="subtotal">0,00 zł</span>
+                                </div>
+                                
+                                <div class="total-row" id="discount-row" style="display: none;">
+                                    <span>Rabat (<span id="discount-code"></span>)</span>
+                                    <span class="discount-amount" id="discount-amount">-0,00 zł</span>
+                                </div>
+                                
+                                <div class="total-row">
+                                    <span>Dostawa</span>
+                                    <span class="delivery-free">Darmowa</span>
+                                </div>
+                                
+                                <div class="total-row total">
+                                    <span>Razem</span>
+                                    <span id="total-price">0,00 zł</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Action Buttons -->
+                            <div class="checkout-actions">
+                                <button type="submit" form="checkout-form" class="btn-primary checkout-submit" id="submit-order">
+                                    <i data-lucide="lock"></i>
+                                    Złóż zamówienie
+                                </button>
+                                
+                                <a href="./cart.html" class="btn-secondary">
+                                    <i data-lucide="arrow-left"></i>
+                                    Wróć do koszyka
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="./images/logo-white.png" alt="BLANK SHOP" class="footer-logo-img">
+                    <p class="footer-description">
+                        Twój niezawodny partner w świecie mody. Odkryj najlepsze marki w wyjątkowych cenach.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Szybkie linki</h4>
+                    <ul class="footer-links">
+                        <li><a href="./index.html">Strona główna</a></li>
+                        <li><a href="./index.html#kategorie">Kategorie</a></li>
+                        <li><a href="./index.html#produkty">Produkty</a></li>
+                        <li><a href="./o-nas.html">O nas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Pomoc</h4>
+                    <ul class="footer-links">
+                        <li><a href="./regulamin.html">Regulamin</a></li>
+                        <li><a href="./polityka-prywatnosci.html">Polityka prywatności</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BLANK SHOP. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/app.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/checkout.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Copy account number function for checkout page
+        function copyCheckoutAccountNumber() {
+            const accountNumber = document.getElementById('checkout-account-number').textContent;
+            navigator.clipboard.writeText(accountNumber).then(() => {
+                showCheckoutCopyNotification('Numer konta skopiowany!');
+            }).catch(() => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = accountNumber;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showCheckoutCopyNotification('Numer konta skopiowany!');
+            });
+        }
+        
+        // Show copy notification for checkout
+        function showCheckoutCopyNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'copy-notification';
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <i data-lucide="check-circle"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Initialize icon
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+            
+            setTimeout(() => notification.classList.add('show'), 100);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

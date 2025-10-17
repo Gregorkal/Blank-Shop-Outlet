@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O nas - BLANK SHOP</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Poznaj historię BLANK SHOP - rodzinnej firmy z wieloletnim doświadczeniem w branży outlet">
+    <meta name="keywords" content="o nas, historia, BLANK SHOP, outlet, rodzinna firma">
+    <meta name="author" content="BLANK SHOP">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="O nas - BLANK SHOP">
+    <meta property="og:description" content="Poznaj historię BLANK SHOP - rodzinnej firmy z wieloletnim doświadczeniem w branży outlet">
+    <meta property="og:image" content="./images/logo.png">
+    <meta property="og:url" content="https://yoursite.com/o-nas">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#f59e0b">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="font-inter">
+    <!-- Header -->
+    <header class="header-modern">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="./index.html" aria-label="BLANK SHOP - Strona główna">
+                        <img src="./images/logo.png" alt="BLANK SHOP" class="logo-img">
+                    </a>
+                </div>
+                
+                <!-- Navigation Desktop -->
+                <nav class="nav-desktop">
+                    <a href="./index.html" class="nav-link">Strona główna</a>
+                    <a href="./index.html#kategorie" class="nav-link">Kategorie</a>
+                    <a href="./index.html#produkty" class="nav-link">Produkty</a>
+                    <a href="./index.html#kontakt" class="nav-link">Kontakt</a>
+                    <a href="./o-nas.html" class="nav-link active">O nas</a>
+                    <a href="./regulamin.html" class="nav-link">Regulamin</a>
+                </nav>
+                
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Szukaj produktów..." class="search-input">
+                    <button class="search-btn" aria-label="Szukaj">
+                        <i data-lucide="search"></i>
+                    </button>
+                </div>
+                
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <button class="icon-btn" aria-label="Ulubione">
+                        <i data-lucide="heart"></i>
+                        <span class="badge" id="favorites-count">0</span>
+                    </button>
+                    <button class="icon-btn" aria-label="Koszyk">
+                        <i data-lucide="shopping-bag"></i>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav" id="mobile-nav">
+                <a href="./index.html" class="mobile-nav-link">Strona główna</a>
+                <a href="./index.html#kategorie" class="mobile-nav-link">Kategorie</a>
+                <a href="./index.html#produkty" class="mobile-nav-link">Produkty</a>
+                <a href="./index.html#kontakt" class="mobile-nav-link">Kontakt</a>
+                <a href="./o-nas.html" class="mobile-nav-link active">O nas</a>
+                <a href="./regulamin.html" class="mobile-nav-link">Regulamin</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <section class="breadcrumbs">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="./index.html" class="breadcrumb-link">
+                    <i data-lucide="home"></i>
+                    Strona główna
+                </a>
+                <i data-lucide="chevron-right" class="breadcrumb-separator"></i>
+                <span class="breadcrumb-current">O nas</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <h1 class="page-title">O nas</h1>
+                    <p class="page-subtitle">Poznaj historię naszej rodzinnej firmy</p>
+                    <div class="page-meta">
+                        <div class="meta-item">
+                            <i data-lucide="users"></i>
+                            <span>Rodzinna firma</span>
+                        </div>
+                        <div class="meta-item">
+                            <i data-lucide="award"></i>
+                            <span>Wieloletnie doświadczenie</span>
+                        </div>
+                        <div class="meta-item">
+                            <i data-lucide="heart"></i>
+                            <span>Pasja do jakości</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-body">
+                    <div class="about-content">
+                        
+                        <!-- Hero Story Section -->
+                        <section class="story-hero">
+                            <div class="story-grid">
+                                <div class="story-text">
+                                    <div class="story-highlight">
+                                        <i data-lucide="sparkles"></i>
+                                        <span>Nasza historia</span>
+                                    </div>
+                                    <h2>Rodzinna firma z pasją</h2>
+                                    <p>Sklep Blank Shop to miejsce, które od lat buduje swoją pozycję na rynku jako rodzinna firma z wieloletnim doświadczeniem. Nasza historia rozpoczęła się od pasji do tworzenia wyjątkowych produktów i dbałości o satysfakcję klientów.</p>
+                                </div>
+                                <div class="story-visual">
+                                    <div class="story-card">
+                                        <div class="card-icon">
+                                            <i data-lucide="heart"></i>
+                                        </div>
+                                        <h3>Pasja</h3>
+                                        <p>Do tworzenia wyjątkowych produktów</p>
+                                    </div>
+                                    <div class="story-card">
+                                        <div class="card-icon">
+                                            <i data-lucide="users"></i>
+                                        </div>
+                                        <h3>Rodzina</h3>
+                                        <p>Wieloletnie doświadczenie rodzinne</p>
+                                    </div>
+                                    <div class="story-card">
+                                        <div class="card-icon">
+                                            <i data-lucide="star"></i>
+                                        </div>
+                                        <h3>Jakość</h3>
+                                        <p>Produkty nowe i oryginalne</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Main Content -->
+                        <section class="main-story">
+                            <div class="content-sections">
+                                <div class="content-section">
+                                    <div class="section-icon">
+                                        <i data-lucide="target"></i>
+                                    </div>
+                                    <div class="section-content">
+                                        <h3>Nasz priorytet - Ty</h3>
+                                        <p>Dziś, dzięki oddaniu i zaangażowaniu całej naszej rodziny, możemy pochwalić się bogatym doświadczeniem oraz szeroką ofertą produktów, które zawsze są nowe i oryginalne.</p>
+                                        <p><strong>Naszym priorytetem jest Ty – Nasz Klient.</strong> Dlatego każdego dnia staramy się działać tak, aby spełniać Twoje oczekiwania i dostarczać najwyższej jakości towary. Wierzymy, że nasza praca ma sens tylko wtedy, gdy Ty jesteś zadowolony.</p>
+                                    </div>
+                                </div>
+
+                                <div class="content-section">
+                                    <div class="section-icon">
+                                        <i data-lucide="compass"></i>
+                                    </div>
+                                    <div class="section-content">
+                                        <h3>Nasza misja</h3>
+                                        <p>Pracujemy dla Was, abyście mogli cieszyć się produktami, które naprawdę warto mieć. Nasza misja to nie tylko sprzedaż, ale również budowanie relacji opartych na zaufaniu i profesjonalizmie.</p>
+                                        <p>Jesteśmy dumni z tego, że możemy być częścią Twojego życia, oferując produkty, które są zarówno praktyczne, jak i inspirujące.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Values Section -->
+                        <section class="values-section">
+                            <h2 class="values-title">Nasze wartości</h2>
+                            <div class="values-grid">
+                                <div class="value-card">
+                                    <div class="value-icon">
+                                        <i data-lucide="shield-check"></i>
+                                    </div>
+                                    <h3>Zaufanie</h3>
+                                    <p>Budujemy długotrwałe relacje oparte na wzajemnym zaufaniu i transparentności</p>
+                                </div>
+                                <div class="value-card">
+                                    <div class="value-icon">
+                                        <i data-lucide="award"></i>
+                                    </div>
+                                    <h3>Jakość</h3>
+                                    <p>Oferujemy wyłącznie nowe i oryginalne produkty najwyższej jakości</p>
+                                </div>
+                                <div class="value-card">
+                                    <div class="value-icon">
+                                        <i data-lucide="users"></i>
+                                    </div>
+                                    <h3>Profesjonalizm</h3>
+                                    <p>Działamy z pełnym zaangażowaniem i profesjonalizmem w każdej sytuacji</p>
+                                </div>
+                                <div class="value-card">
+                                    <div class="value-icon">
+                                        <i data-lucide="heart"></i>
+                                    </div>
+                                    <h3>Satysfakcja</h3>
+                                    <p>Twoje zadowolenie to nasz sukces i motywacja do dalszego działania</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Thank You Section -->
+                        <section class="thank-you-section">
+                            <div class="thank-you-content">
+                                <div class="thank-you-icon">
+                                    <i data-lucide="heart-handshake"></i>
+                                </div>
+                                <h2>Dziękujemy za wybieranie Sklep Blank Shop!</h2>
+                                <p>Twoje zaufanie to dla nas największa nagroda. Dziękujemy, że jesteś z nami w tej podróży!</p>
+                            </div>
+                        </section>
+
+                        <!-- Contact CTA -->
+                        <div class="contact-cta">
+                            <div class="cta-content">
+                                <div class="cta-icon">
+                                    <i data-lucide="message-circle"></i>
+                                </div>
+                                <div class="cta-text">
+                                    <h3>Chcesz nas poznać lepiej?</h3>
+                                    <p>Skontaktuj się z nami - z przyjemnością odpowiemy na wszystkie pytania!</p>
+                                </div>
+                                <div class="cta-actions">
+                                    <a href="tel:+48880167799" class="btn-primary">
+                                        <i data-lucide="phone"></i>
+                                        Zadzwoń
+                                    </a>
+                                    <a href="mailto:blankshop@onet.pl" class="btn-secondary">
+                                        <i data-lucide="mail"></i>
+                                        Napisz
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="terms-footer">
+                            <div class="store-info">
+                                <h4>BLANK SHOP - Twój ulubiony Outlet!</h4>
+                                <p>Jesteśmy dla Ciebie! 😊</p>
+                                <div class="contact-details">
+                                    <span>Kontakt: <a href="tel:+48880167799">+48 880 167 799</a> | <a href="mailto:blankshop@onet.pl">blankshop@onet.pl</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./images/logo.png" alt="BLANK SHOP" class="footer-logo-img">
+                    </div>
+                    <p class="footer-description">
+                        Twój ulubiony outlet online. Markowe produkty w najlepszych cenach.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/okazjeoutlet" class="social-link" aria-label="Facebook">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Sklep</h3>
+                    <ul class="footer-links">
+                        <li><a href="./index.html#kategorie">Kategorie</a></li>
+                        <li><a href="./index.html#produkty">Produkty</a></li>
+                        <li><a href="./o-nas.html" class="active">O nas</a></li>
+                        <li><a href="./index.html#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Pomoc</h3>
+                    <ul class="footer-links">
+                        <li><a href="./regulamin.html">Regulamin</a></li>
+                        <li><a href="./polityka-prywatnosci.html">Polityka prywatności</a></li>
+                        <li><a href="#">Zwroty i reklamacje</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Kontakt</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>ul. Grabowska 12<br>63-400 Ostrów Wielkopolski</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <a href="tel:+48880167799" class="contact-link">+48 880 167 799</a>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <a href="mailto:blankshop@onet.pl" class="contact-link">blankshop@onet.pl</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">
+                        © 2025 BLANK SHOP. Wszystkie prawa zastrzeżone.
+                    </p>
+                    <div class="footer-bottom-links">
+                        <a href="./regulamin.html">Regulamin</a>
+                        <a href="./polityka-prywatnosci.html">Polityka prywatności</a>
+                        <a href="#">Pliki cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./js/app.js"></script>
+    <script>
+        // Initialize icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
